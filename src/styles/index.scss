@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Domine:wght@600&family=Poppins:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Domine:wght@600&family=Poppins:wght@300&display=swap');
+body {
+  margin: 0;
+  padding: 0;
+}
+.flex {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.flex-right {
+  justify-content: flex-end;
+  padding: 24px;
+}
+.flex-col + .flex-col {
+  margin: 0 16px;
+}
+.flex-col:last-child {
+  margin: 0;
+}
+.bg-main {
+  position: fixed;
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url('/static/New Project.png');
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+.el-button.sosial-link {
+  padding: 0;
+  height: 32px;
+  width: 32px;
+  font-size: 16px;
+}
+.m-main {
+  position: relative;
+}
+.m-content {
+  position: fixed;
+  top: 50%;
+  left: 120px;
+  transform: translateY(-50%);
+  width: 100%;
+  max-width: 480px;
+  text-align: center;
+  .title {
+    font-family: 'Domine', serif;
+    font-size: 48px;
+    color: #424242;
+    margin: 0 0 16px;
+  }
+  .description {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    color: #8B8B8B;
+    .el-button {
+      font-size: inherit;
+      font-family: inherit;
+      padding: 0;
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .wave {
+    display: none;
+  }
+  .bg-main {
+    background-position: bottom;
+    background-size: contain;
+    background-image: url('/static/bg-main.png');
+  }
+  .m-content {
+    top: 30%;
+    left: 50%;
+    transform: translateY(-30%) translateX(-50%);
+    width: calc(100% - 24px);
+    max-width: calc(100% - 24px);
+  }
+  .flex-right {
+    padding: 16px;
+  }
+}
